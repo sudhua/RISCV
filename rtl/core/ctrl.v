@@ -7,7 +7,7 @@ module ctrl(
     // to pc_reg 
     jump_addr_o,
     jump_flag_o,
-    // to if_id 、id_ex
+    // to if_id id_ex
     pause_flag_o
     );
     input rst_n;
@@ -25,11 +25,6 @@ module ctrl(
             pause_flag_o = `Pause_Id;
         else
             pause_flag_o = pause_flag_o;
-
     end
-
-
-
-
-
+    
 endmodule
