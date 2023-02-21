@@ -1,0 +1,21 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../user/src/core/ctrl.v" \
+"../../../../../../user/src/core/div.v" \
+"../../../../../../user/src/core/ex.v" \
+"../../../../../../user/src/core/id.v" \
+"../../../../../../user/src/core/id_ex.v" \
+"../../../../../../user/src/core/if_id.v" \
+"../../../../../../user/src/core/pc_reg.v" \
+"../../../../../../user/src/peripheral/ram.v" \
+"../../../../../../user/src/core/regs.v" \
+"../../../../../../user/src/peripheral/rom.v" \
+"../../../../../../user/src/core/tiny_riscv.v" \
+"../../../../../../user/src/soc/tinyriscv_soc_top.v" \
+"../../../../../../user/sim/testbench.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

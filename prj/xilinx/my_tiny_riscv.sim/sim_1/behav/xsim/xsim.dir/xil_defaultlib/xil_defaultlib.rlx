@@ -1,0 +1,19 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+c:/Users/Hua/Desktop/my_tiny_riscv_dide/prj/xilinx/my_tiny_riscv.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,,,,,,,
+c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/sim/testbench.v,1673511497,verilog,,,,testbench,,,,,,,,
+c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/ctrl.v,1673846734,verilog,,c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/div.v,c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/defines.v,ctrl,,,,,,,,
+c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/defines.v,1673678791,verilog,,,,,,,,,,,,
+c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/div.v,1673840975,verilog,,c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/ex.v,c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/defines.v,div,,,,,,,,
+c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/ex.v,1673693632,verilog,,c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/id.v,c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/defines.v,ex,,,,,,,,
+c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/id.v,1673527093,verilog,,c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/id_ex.v,c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/defines.v,id,,,,,,,,
+c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/id_ex.v,1673674020,verilog,,c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/if_id.v,c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/defines.v,id_ex,,,,,,,,
+c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/if_id.v,1673529444,verilog,,c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/pc_reg.v,c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/defines.v,if_id,,,,,,,,
+c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/pc_reg.v,1673674648,verilog,,c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/peripheral/ram.v,c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/defines.v,pc_reg,,,,,,,,
+c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/regs.v,1672825074,verilog,,c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/peripheral/rom.v,c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/defines.v,regs,,,,,,,,
+c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/tiny_riscv.v,1673506343,verilog,,c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/soc/tinyriscv_soc_top.v,c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/defines.v,tiny_riscv,,,,,,,,
+c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/peripheral/ram.v,1673162564,verilog,,c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/regs.v,c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/defines.v,ram,,,,,,,,
+c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/peripheral/rom.v,1673176419,verilog,,c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/tiny_riscv.v,c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/defines.v,rom,,,,,,,,
+c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/soc/tinyriscv_soc_top.v,1673181020,verilog,,c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/sim/testbench.v,,tinyriscv_soc_top,,,,,,,,

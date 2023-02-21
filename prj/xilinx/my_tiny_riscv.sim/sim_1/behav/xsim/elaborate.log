@@ -1,0 +1,49 @@
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/tools/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/soc/tinyriscv_soc_top.v" Line 1. Module tinyriscv_soc_top doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/tiny_riscv.v" Line 3. Module tiny_riscv doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/ctrl.v" Line 3. Module ctrl doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/pc_reg.v" Line 3. Module pc_reg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/if_id.v" Line 3. Module if_id doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/regs.v" Line 3. Module regs doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/id.v" Line 3. Module id doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/id_ex.v" Line 3. Module id_ex doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/ex.v" Line 3. Module ex doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/div.v" Line 3. Module div doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/peripheral/rom.v" Line 3. Module rom doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/peripheral/ram.v" Line 3. Module ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/soc/tinyriscv_soc_top.v" Line 1. Module tinyriscv_soc_top doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/tiny_riscv.v" Line 3. Module tiny_riscv doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/ctrl.v" Line 3. Module ctrl doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/pc_reg.v" Line 3. Module pc_reg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/if_id.v" Line 3. Module if_id doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/regs.v" Line 3. Module regs doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/id.v" Line 3. Module id doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/id_ex.v" Line 3. Module id_ex doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/ex.v" Line 3. Module ex doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/core/div.v" Line 3. Module div doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/peripheral/rom.v" Line 3. Module rom doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "c:/Users/Hua/Desktop/my_tiny_riscv_dide/user/src/peripheral/ram.v" Line 3. Module ram doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ctrl
+Compiling module xil_defaultlib.pc_reg
+Compiling module xil_defaultlib.if_id
+Compiling module xil_defaultlib.regs
+Compiling module xil_defaultlib.id
+Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.ex
+Compiling module xil_defaultlib.div
+Compiling module xil_defaultlib.tiny_riscv
+Compiling module xil_defaultlib.rom
+Compiling module xil_defaultlib.ram
+Compiling module xil_defaultlib.tinyriscv_soc_top
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
