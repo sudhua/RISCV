@@ -2,29 +2,29 @@
 
 module clint
     (
-        input clk,
-        input rst_n,
-        // from soc_top
-        input [31:0] int_req_i,
-        // from id
-        input [31:0] inst_i,
-        input [31:0] inst_addr_i,
-        // from csr_reg
-        input  [31:0] csr_mtvec_i,
-        input [31:0] csr_mstatus_i,
-        input [31:0] csr_mepc_i,
-        input global_int_en_i,
+        input                   clk,
+        input                   rst_n,
+        // from soc_top     
+        input [31:0]            int_req_i,
+        // from id      
+        input [31:0]            inst_i,
+        input [31:0]            inst_addr_i,
+        // from csr_reg     
+        input  [31:0]           csr_mtvec_i,
+        input [31:0]            csr_mstatus_i,
+        input [31:0]            csr_mepc_i,
+        input                   global_int_en_i,
         // to csr_reg
-        output reg csr_we_o,
-        output reg [31:0] csr_waddr_o,
-        output reg [31:0] csr_wdata_o,
+        output reg              csr_we_o,
+        output reg [31:0]       csr_waddr_o,
+        output reg [31:0]       csr_wdata_o,
         // from ex
-        input jump_flag_i,
-        input [31:0] jump_addr_i,
-        input div_start_i,
+        input                   jump_flag_i,
+        input [31:0]            jump_addr_i,
+        input                   div_start_i,
         // to ex
-        output reg trap_en_o,
-        output reg [31:0] trap_addr_o
+        output reg              trap_en_o,
+        output reg [31:0]       trap_addr_o
 
     );
     localparam [3:0]    TRAP_IDLE  =  4'b0001,

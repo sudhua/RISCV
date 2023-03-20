@@ -16,10 +16,10 @@ module pc_reg
             pc_o <= 32'h0;
         else if(jump_flag_i == `JumpEnable)
             pc_o <= jump_addr_i;
-        else if(hold_flag_i >= 1)
+        else if(hold_flag_i >= `Pause_Pc)
             pc_o <= pc_o;
         else
-            pc_o <= pc_o + 3'h4;
+            pc_o <= pc_o + 4'h4;
 
 
 endmodule

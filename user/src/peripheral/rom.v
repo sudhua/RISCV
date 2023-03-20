@@ -9,7 +9,7 @@ module rom
     // to if_id
     output reg [31:0]   data_o
 );
-    reg [31:0] _rom [0 : 4095];
+    reg [31:0] _rom [0 : 511];
 
     always @(*)
         if(!rst_n)

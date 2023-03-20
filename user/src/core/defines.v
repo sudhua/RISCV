@@ -12,8 +12,11 @@
 
 `define Reset 1'b0
 `define Set 1'b1
-`define Pause_Id 3'h2
-`define Pause_If 3'h1
+
+`define Pause_Pc 3'h1
+`define Pause_If 3'h2
+`define Pause_Id 3'h3
+
 
 `define ResultReady 1'b1
 `define ResultNoReady 1'b0
@@ -50,6 +53,7 @@
 `define INST_SRI   3'h5
 `define INST_SLTI  3'h2
 `define INST_SLTIU 3'h3
+
 //inst_type_r_m
 `define INST_ADD_SUB 3'h0
 `define INST_XOR 3'h4
@@ -108,5 +112,11 @@
 `define INST_EBREAK   32'b000000000001_00000_000_00000_1110011
 `define INST_ECALL   32'b000000000000_00000_000_00000_1110011
 `define INST_MRET  32'b0011000_00010_00000_000_00000_1110011
+`define INST_NOP 32'b0000_0001
+// INT 
+`define TIME_INT 32'd2
+
+`define RIB_NREQ 1'b0
+`define RIB_REQ  1'b1
 
 

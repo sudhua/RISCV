@@ -26,8 +26,8 @@ def main():
     # testbench文件
     iverilog_cmd.append(rtl_dir + tb_file)
     # ../rtl/core
-    # iverilog_cmd.append(rtl_dir + r'/rtl/core/clint.v')
-    # iverilog_cmd.append(rtl_dir + r'/rtl/core/csr_reg.v')
+    iverilog_cmd.append(rtl_dir + r'/src/core/clint.v')
+    iverilog_cmd.append(rtl_dir + r'/src/core/csr_reg.v')
     iverilog_cmd.append(rtl_dir + r'/src/core/ctrl.v')
     iverilog_cmd.append(rtl_dir + r'/src/core/defines.v')
     iverilog_cmd.append(rtl_dir + r'/src/core/div.v')
@@ -37,12 +37,12 @@ def main():
     iverilog_cmd.append(rtl_dir + r'/src/core/if_id.v')
     iverilog_cmd.append(rtl_dir + r'/src/core/pc_reg.v')
     iverilog_cmd.append(rtl_dir + r'/src/core/regs.v')
-    # iverilog_cmd.append(rtl_dir + r'/rtl/core/rib.v')
+    iverilog_cmd.append(rtl_dir + r'/src/core/rib.v')
     iverilog_cmd.append(rtl_dir + r'/src/core/tiny_riscv.v')
     # ../rtl/perips
     iverilog_cmd.append(rtl_dir + r'/src/peripheral/ram.v')
     iverilog_cmd.append(rtl_dir + r'/src/peripheral/rom.v')
-    # iverilog_cmd.append(rtl_dir + r'/rtl/perips/timer.v')
+    iverilog_cmd.append(rtl_dir + r'/src/peripheral/timer.v')
     # iverilog_cmd.append(rtl_dir + r'/rtl/perips/uart.v')
     # iverilog_cmd.append(rtl_dir + r'/rtl/perips/gpio.v')
     # iverilog_cmd.append(rtl_dir + r'/rtl/perips/spi.v')

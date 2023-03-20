@@ -15,11 +15,12 @@ _start:
 #endif
 
 	/* Load data section */
-  /*加载data段，存储需要初始化的全局变量和静态变量*/
-	la a0, _data_lma
-	la a1, _data
-	la a2, _edata
-	bgeu a1, a2, 2f //bgeu无符号大于等于
+  //将data段从程序存储器(ROM)搬运至数据存储器(RAM)，作为可读可写的变量。
+	//如果a1 >= a2 则表明data段没有数据，不需要把数据搬到ram中。
+	la a0, _data_lma //程序存储器的data段起始地址
+	la a1, _data //数据存储器的data段起始地址
+	la a2, _edata //数据存储器的data段结束地址
+	bgeu a1, a2, 2f //bgeu无符号大于等于 f向后搜索标签1
 1:
 	lw t0, (a0)
 	sw t0, (a1)

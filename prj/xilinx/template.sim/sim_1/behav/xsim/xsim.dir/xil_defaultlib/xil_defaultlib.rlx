@@ -1,0 +1,23 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+D:/GitHub/RISCV/prj/xilinx/template.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,,,,,,,
+D:/GitHub/RISCV/user/sim/testbench.v,1679309588,verilog,,,,testbench,,,,,,,,
+D:/GitHub/RISCV/user/src/core/clint.v,1679310348,verilog,,D:/GitHub/RISCV/user/src/core/csr_reg.v,D:/GitHub/RISCV/user/src/core/defines.v,clint,,,,,,,,
+D:/GitHub/RISCV/user/src/core/csr_reg.v,1679311314,verilog,,D:/GitHub/RISCV/user/src/core/ctrl.v,D:/GitHub/RISCV/user/src/core/defines.v,csr_reg,,,,,,,,
+D:/GitHub/RISCV/user/src/core/ctrl.v,1679297124,verilog,,D:/GitHub/RISCV/user/src/core/div.v,D:/GitHub/RISCV/user/src/core/defines.v,ctrl,,,,,,,,
+D:/GitHub/RISCV/user/src/core/defines.v,1679297106,verilog,,,,,,,,,,,,
+D:/GitHub/RISCV/user/src/core/div.v,1673846492,verilog,,D:/GitHub/RISCV/user/src/core/ex.v,D:/GitHub/RISCV/user/src/core/defines.v,div,,,,,,,,
+D:/GitHub/RISCV/user/src/core/ex.v,1679295844,verilog,,D:/GitHub/RISCV/user/src/core/id.v,D:/GitHub/RISCV/user/src/core/defines.v,ex,,,,,,,,
+D:/GitHub/RISCV/user/src/core/id.v,1675402370,verilog,,D:/GitHub/RISCV/user/src/core/id_ex.v,D:/GitHub/RISCV/user/src/core/defines.v,id,,,,,,,,
+D:/GitHub/RISCV/user/src/core/id_ex.v,1676940630,verilog,,D:/GitHub/RISCV/user/src/core/if_id.v,D:/GitHub/RISCV/user/src/core/defines.v,id_ex,,,,,,,,
+D:/GitHub/RISCV/user/src/core/if_id.v,1673845961,verilog,,D:/GitHub/RISCV/user/src/core/pc_reg.v,D:/GitHub/RISCV/user/src/core/defines.v,if_id,,,,,,,,
+D:/GitHub/RISCV/user/src/core/pc_reg.v,1679297253,verilog,,D:/GitHub/RISCV/user/src/peripheral/ram.v,D:/GitHub/RISCV/user/src/core/defines.v,pc_reg,,,,,,,,
+D:/GitHub/RISCV/user/src/core/regs.v,1675393454,verilog,,D:/GitHub/RISCV/user/src/core/rib.v,D:/GitHub/RISCV/user/src/core/defines.v,regs,,,,,,,,
+D:/GitHub/RISCV/user/src/core/rib.v,1679309439,verilog,,D:/GitHub/RISCV/user/src/peripheral/rom.v,D:/GitHub/RISCV/user/src/core/defines.v,rib,,,,,,,,
+D:/GitHub/RISCV/user/src/core/tiny_riscv.v,1679314147,verilog,,D:/GitHub/RISCV/user/src/soc/tinyriscv_soc_top.v,D:/GitHub/RISCV/user/src/core/defines.v,tiny_riscv,,,,,,,,
+D:/GitHub/RISCV/user/src/peripheral/ram.v,1673846511,verilog,,D:/GitHub/RISCV/user/src/core/regs.v,D:/GitHub/RISCV/user/src/core/defines.v,ram,,,,,,,,
+D:/GitHub/RISCV/user/src/peripheral/rom.v,1679311759,verilog,,D:/GitHub/RISCV/user/src/peripheral/timer.v,D:/GitHub/RISCV/user/src/core/defines.v,rom,,,,,,,,
+D:/GitHub/RISCV/user/src/peripheral/timer.v,1679041632,verilog,,D:/GitHub/RISCV/user/src/core/tiny_riscv.v,D:/GitHub/RISCV/user/src/core/defines.v,timer,,,,,,,,
+D:/GitHub/RISCV/user/src/soc/tinyriscv_soc_top.v,1679309253,verilog,,D:/GitHub/RISCV/user/sim/testbench.v,D:/GitHub/RISCV/user/src/core/defines.v,tinyriscv_soc_top,,,,,,,,

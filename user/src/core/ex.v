@@ -25,9 +25,11 @@ module ex
     output reg          hold_flag_ex_o,
     // to ram
     output reg          mem_we_o,
+    output reg          mem_req_o,
     output reg [31:0]   mem_waddr_o,
     output reg [31:0]   mem_wdata_o,
     output reg [31:0]   mem_raddr_o,
+
     // from div
     input [31:0]        div_result_i,   // 除法结果输出
     input               div_busy_i,     // 除法计算中标志
@@ -193,6 +195,7 @@ module ex
         mem_we_o = `WriteDisable;
         mem_waddr_o = `ZeroWord;
         mem_wdata_o = `ZeroWord;
+        mem_req_o = `RIB_NREQ;
         // to csr_reg
         csr_we_o = csr_we_i;
         csr_waddr_o = csr_waddr_i;
@@ -386,7 +389,8 @@ module ex
             `INST_TYPE_S:
                 case(funct3)
                     `INST_SB:begin
-                        mem_we_o = `WriteEnable; 
+                        mem_we_o = `WriteEnable;
+                        mem_req_o = `RIB_REQ; 
                         mem_waddr_o = op1_i + {{20{inst_i[31]}}, inst_i[31:25], inst_i[11:7]};
                         mem_raddr_o = op1_i + {{20{inst_i[31]}}, inst_i[31:25], inst_i[11:7]};
                         case(mem_waddr_index)//RISC_V 是小端模式 - 低字节存储在低地址
@@ -402,6 +406,7 @@ module ex
                     end
                     `INST_SH:begin
                         mem_we_o = `WriteEnable;
+                        mem_req_o = `RIB_REQ; 
                         mem_waddr_o = op1_i + {{20{inst_i[31]}}, inst_i[31:25], inst_i[11:7]};
                         mem_raddr_o = op1_i + {{20{inst_i[31]}}, inst_i[31:25], inst_i[11:7]};
                         case(mem_waddr_index)
@@ -413,12 +418,14 @@ module ex
                     end
                     `INST_SW:begin
                         mem_we_o = `WriteEnable;
+                        mem_req_o = `RIB_REQ; 
                         mem_waddr_o = op1_i + {{20{inst_i[31]}}, inst_i[31:25], inst_i[11:7]};
                         mem_raddr_o = op1_i + {{20{inst_i[31]}}, inst_i[31:25], inst_i[11:7]};
                         mem_wdata_o = op2_i;
                     end
                     default: begin
                         mem_we_o = `WriteDisable;
+                        mem_req_o = `RIB_NREQ; 
                         mem_waddr_o = `ZeroWord;
                         mem_raddr_o = `ZeroWord;
                     end
@@ -426,6 +433,7 @@ module ex
             `INST_TYPE_L:
                 case(funct3)
                     `INST_LB:begin
+                        mem_req_o = `RIB_REQ;
                         mem_raddr_o = op1_i + {{20{inst_i[31]}}, inst_i[31:20]};
                         case(mem_raddr_index)
                             2'h0:
@@ -440,6 +448,7 @@ module ex
                        
                     end
                     `INST_LH:begin
+                        mem_req_o = `RIB_REQ;
                         mem_raddr_o = op1_i + {{20{inst_i[31]}}, inst_i[31:20]};
                         case(mem_raddr_index)
                             2'h0:
@@ -449,10 +458,12 @@ module ex
                         endcase
                     end
                     `INST_LW:begin
+                        mem_req_o = `RIB_REQ;
                         mem_raddr_o = op1_i + {{20{inst_i[31]}}, inst_i[31:20]};
                         reg_wdata = mem_rdata_i;   
                     end
                     `INST_LBU:begin
+                        mem_req_o = `RIB_REQ;
                         mem_raddr_o = op1_i + {{20{inst_i[31]}}, inst_i[31:20]};
                         case(mem_raddr_index)
                             2'h0:
@@ -466,6 +477,7 @@ module ex
                         endcase
                     end
                     `INST_LHU:begin
+                        mem_req_o = `RIB_REQ;
                         mem_raddr_o = op1_i + {{20{inst_i[31]}}, inst_i[31:20]};
                         case(mem_raddr_index)
                             2'h0:
@@ -475,6 +487,7 @@ module ex
                         endcase
                     end
                     default:begin
+                        mem_req_o = `RIB_NREQ;
                         mem_raddr_o = `ZeroWord;
                         reg_wdata = `ZeroWord;
                     end

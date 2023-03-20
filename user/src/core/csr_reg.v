@@ -17,8 +17,8 @@ module csr_reg
         input [31:0]        clint_waddr_i,
         input [31:0]        clint_wdata_i,
         // to clint
-        output [31:0]       mcause_o,
-        output [31:0]       mstauts_o,
+        output [31:0]       mepc_o,
+        output [31:0]       mstatus_o,
         output [31:0]       mtvec_o,
         output              global_int_en_o
     );
@@ -37,8 +37,9 @@ module csr_reg
     assign csr_raddr = raddr_i[11:0];
     assign csr_waddr = waddr_i[11:0];
     assign mcause_o = mcause;
-    assign mstauts_o = mstatus;
+    assign mstatus_o = mstatus;
     assign mtvec_o = mtvec;
+    assign mepc_o = mepc;
     assign global_int_en_o = mstatus[3];
 
     // 读csr_reg

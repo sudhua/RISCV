@@ -1,0 +1,34 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub/RISCV/user/src/core/clint.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clint
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub/RISCV/user/src/core/csr_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module csr_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub/RISCV/user/src/core/ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub/RISCV/user/src/core/div.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub/RISCV/user/src/core/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub/RISCV/user/src/core/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub/RISCV/user/src/core/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub/RISCV/user/src/core/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub/RISCV/user/src/core/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub/RISCV/user/src/peripheral/ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub/RISCV/user/src/core/regs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regs
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub/RISCV/user/src/core/rib.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub/RISCV/user/src/peripheral/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub/RISCV/user/src/peripheral/timer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module timer
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub/RISCV/user/src/core/tiny_riscv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tiny_riscv
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub/RISCV/user/src/soc/tinyriscv_soc_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tinyriscv_soc_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub/RISCV/user/sim/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench

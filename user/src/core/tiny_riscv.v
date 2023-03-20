@@ -7,11 +7,14 @@ module tiny_riscv
     input [31:0]    inst_i,
     output [31:0]   inst_addr_o,
     output          mem_we_o,
+    output          mem_req_o,
     output [31:0]   mem_waddr_o,
     output [31:0]   mem_wdata_o,
     input [31:0]    mem_rdata_i,
     output [31:0]   mem_raddr_o,
-    input [31:0]    int_req_i         
+    input [31:0]    int_req_i,
+    output [31:0]   rib_pc_o,
+    input           rib_hold_flag_i
 );
     // ctrl module output signal
     wire [31:0]	    ctrl_jump_addr_o;
@@ -57,6 +60,7 @@ module tiny_riscv
     wire            ex_jump_flag_o;
     wire            ex_hold_flag_ex_o;
     wire            ex_mem_we_o;
+    wire            ex_mem_req_o;    
     wire [31:0]     ex_mem_waddr_o;
     wire [31:0]     ex_mem_wdata_o;
     wire [31:0]     ex_mem_raddr_o;
@@ -75,14 +79,14 @@ module tiny_riscv
     
     // csr_reg module output signal  
     wire [31:0] 	csr_rdata_o;
-    wire [31:0] 	csr_mcause_o;
-    wire [31:0] 	csr_mstauts_o;
+    wire [31:0] 	csr_mepc_o;
+    wire [31:0] 	csr_mstatus_o;
     wire [31:0] 	csr_mtvec_o;
     wire        	csr_global_int_en_o;
     // clint module output signal  
-    wire        	csr_we_o;
-    wire [31:0] 	csr_waddr_o;
-    wire [31:0] 	csr_wdata_o;
+    wire        	clint_csr_we_o;
+    wire [31:0] 	clint_csr_waddr_o;
+    wire [31:0] 	clint_csr_wdata_o;
     wire        	clint_trap_en_o;
     wire [31:0] 	clint_trap_addr_o;
 
@@ -92,6 +96,10 @@ module tiny_riscv
     assign mem_waddr_o = ex_mem_waddr_o;
     assign mem_wdata_o = ex_mem_wdata_o;
     assign mem_raddr_o = ex_mem_raddr_o;
+    assign rib_pc_o = pc_reg_pc_o;
+    assign rib_inst_i = pc_reg_pc_o;
+
+    assign mem_req_o = ex_mem_req_o;
 
     ctrl u_ctrl(
         //ports
@@ -120,7 +128,7 @@ module tiny_riscv
         .rst_n       		( rst_n       		),
         .inst_i      		( inst_i      	    ),
         .inst_addr_i 		( pc_reg_pc_o       ),
-        .hold_flag_i       ( ctrl_hold_flag_o ),
+        .hold_flag_i        ( ctrl_hold_flag_o  ),
         .inst_o      		( if_id_inst_o      ),
         .inst_addr_o 		( if_id_inst_addr_o )
     );
@@ -205,6 +213,7 @@ module tiny_riscv
         .jump_flag_o        ( ex_jump_flag_o	),
         .hold_flag_ex_o     ( ex_hold_flag_ex_o ),
         .mem_we_o           ( ex_mem_we_o       ),
+        .mem_req_o          ( ex_mem_req_o      ),
         .mem_waddr_o        ( ex_mem_waddr_o    ),
         .mem_wdata_o        ( ex_mem_wdata_o    ),
         .mem_raddr_o        ( ex_mem_raddr_o    ),
@@ -243,11 +252,11 @@ module tiny_riscv
         .wdata_i         	( ex_csr_wdata_o       ),
         .rdata_o         	( csr_rdata_o          ),
         .raddr_i         	( id_csr_raddr_o       ),
-        .clint_we_i      	( clint_we_i           ),
-        .clint_waddr_i   	( clint_waddr_i        ),
-        .clint_wdata_i   	( clint_wdata_i        ),
-        .mcause_o        	( csr_mcause_o         ),
-        .mstauts_o       	( csr_mstauts_o        ),
+        .clint_we_i      	( clint_csr_we_o       ),
+        .clint_waddr_i   	( clint_csr_waddr_o    ),
+        .clint_wdata_i   	( clint_csr_wdata_o    ),
+        .mepc_o        	    ( csr_mepc_o           ),
+        .mstatus_o       	( csr_mstatus_o        ),
         .mtvec_o         	( csr_mtvec_o          ),
         .global_int_en_o 	( csr_global_int_en_o  )
     );
@@ -272,7 +281,4 @@ module tiny_riscv
         .trap_en_o       	( clint_trap_en_o     ),
         .trap_addr_o     	( clint_trap_addr_o   )
     );
-
-
-
 endmodule
