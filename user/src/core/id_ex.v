@@ -34,58 +34,40 @@ module id_ex
     assign hold_en = (hold_flag_i >= `Pause_Id);
 
     always @(posedge clk or negedge rst_n)
-    if(!rst_n | hold_en)
-        inst_o <= `ZeroWord;
-    else 
-        inst_o <= inst_i;
+    if(!rst_n | hold_en)     inst_o <= `ZeroWord       ;
+    else                     inst_o <= inst_i          ;
 
     always @(posedge clk or negedge rst_n)
-    if(!rst_n | hold_en)
-        inst_addr_o <= `ZeroWord;
-    else 
-        inst_addr_o <= inst_addr_i;
+    if(!rst_n | hold_en)     inst_addr_o <= `ZeroWord  ;
+    else                     inst_addr_o <= inst_addr_i;
     
     always @(posedge clk or negedge rst_n)
-    if(!rst_n | hold_en)
-        reg_waddr_o <= `ZeroWord;
-    else 
-        reg_waddr_o <= reg_waddr_i;
+    if(!rst_n | hold_en)     reg_waddr_o <= `ZeroWord  ;
+    else                     reg_waddr_o <= reg_waddr_i;
 
     always @(posedge clk or negedge rst_n)
-    if(!rst_n | hold_en)
-        reg_we_o <= `WriteDisable;
-    else 
-        reg_we_o <= reg_we_i;
+    if(!rst_n | hold_en)     reg_we_o <= `WriteDisable ;
+    else                     reg_we_o <= reg_we_i      ;
 
     always @(posedge clk or negedge rst_n)
-    if(!rst_n | hold_en)
-        op1_o <= `ZeroWord;
-    else 
-        op1_o <= op1_i;
+    if(!rst_n | hold_en)     op1_o <= `ZeroWord        ;
+    else                     op1_o <= op1_i            ;
 
     always @(posedge clk or negedge rst_n)
-    if(!rst_n | hold_en)
-        op2_o <= `ZeroWord;
-    else 
-        op2_o <= op2_i;
+    if(!rst_n | hold_en)     op2_o <= `ZeroWord        ;
+    else                     op2_o <= op2_i            ;
 
     always @(posedge clk or negedge rst_n)
-    if(!rst_n | hold_en)
-        csr_we_o <= `WriteDisable;
-    else 
-        csr_we_o <= csr_we_i;
+    if(!rst_n | hold_en)     csr_we_o <= `WriteDisable ;
+    else                     csr_we_o <= csr_we_i      ;
 
     always @(posedge clk or negedge rst_n)
-    if(!rst_n | hold_en)
-        csr_waddr_o <= `ZeroWord;
-    else 
-        csr_waddr_o <= csr_waddr_i;
+    if(!rst_n | hold_en)     csr_waddr_o <= `ZeroWord  ;
+    else                     csr_waddr_o <= csr_waddr_i;
     
     always @(posedge clk or negedge rst_n)
-    if(!rst_n | hold_en)
-        csr_rdata_o <= `ZeroWord;
-    else 
-        csr_rdata_o <= csr_rdata_i;
+    if(!rst_n | hold_en)     csr_rdata_o <= `ZeroWord  ;
+    else                     csr_rdata_o <= csr_rdata_i;
     
 
 endmodule

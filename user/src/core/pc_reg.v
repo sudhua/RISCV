@@ -2,12 +2,12 @@
 
 module pc_reg
     (
-    input               clk,
-    input               rst_n,
+    input               clk            ,
+    input               rst_n          ,
     // from ctrl
-    input [31:0]        jump_addr_i,
-    input               jump_flag_i,
-    input [2:0]         hold_flag_i,
+    input [31:0]        jump_addr_i    ,
+    input               jump_flag_i    ,
+    input [2:0]         hold_flag_i    ,
     // to if_id
     output reg [31:0]   pc_o
 );
@@ -20,6 +20,5 @@ module pc_reg
             pc_o <= pc_o;
         else
             pc_o <= pc_o + 4'h4;
-
 
 endmodule

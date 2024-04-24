@@ -107,53 +107,53 @@ module ex
     assign Zimm = {27'b0,inst_i[19:15]};
     // 处理除法
     always @(*)begin
-        div_op_o = funct3;
-        dividend_o = op1_i;
-        divisor_o = op2_i;
-        div_jump_flag = `Reset;
-        div_jump_addr = `ZeroWord;
-        div_reg_we = `WriteDisable;
-        div_reg_waddr = reg_waddr_i;
-        div_reg_wdata = `ZeroWord;
+        div_op_o      = funct3        ;
+        dividend_o    = op1_i         ;
+        divisor_o     = op2_i         ;
+        div_jump_flag = `Reset        ;
+        div_jump_addr = `ZeroWord     ;
+        div_reg_we    = `WriteDisable ;
+        div_reg_waddr = reg_waddr_i   ;
+        div_reg_wdata = `ZeroWord     ;
         if((funct7 == 7'b0000001) || (opcode == `INST_TYPE_R_M))
             case(funct3)
                 `INST_DIV, `INST_DIVU, `INST_REM, `INST_REMU:begin
-                    div_strat_o = `DivStart;
-                    div_jump_flag = `JumpEnable;
-                    div_jump_addr = inst_addr_i + 3'h4; //div为多周期计算，当流水线暂停时，流水线上的地址全为0，故用跳转保存除法的后一条指令的地址
-                    div_reg_we = `WriteDisable;
+                    div_strat_o       = `DivStart;
+                    div_jump_flag     = `JumpEnable;
+                    div_jump_addr     = inst_addr_i + 3'h4; //div为多周期计算，当流水线暂停时，流水线上的地址全为0，故用跳转保存除法的后一条指令的地址
+                    div_reg_we        = `WriteDisable;
                     div_reg_waddr_tmp = div_reg_waddr;
                 end
                 default:begin
-                    div_strat_o = `DivStop;
-                    div_jump_flag = `JumpDisable;
-                    div_jump_addr = `ZeroWord;
-                    div_reg_we = `WriteDisable;
+                    div_strat_o       = `DivStop;
+                    div_jump_flag     = `JumpDisable;
+                    div_jump_addr     = `ZeroWord;
+                    div_reg_we        = `WriteDisable;
                     div_reg_waddr_tmp = `ZeroWord;
                 end
             endcase
         if(div_ready_i == `ResultReady)begin
-            div_strat_o = `DivStop;
-            div_reg_we = `WriteEnable;
+            div_strat_o   = `DivStop;
+            div_reg_we    = `WriteEnable;
             div_reg_waddr =  div_reg_waddr_tmp;
             div_reg_wdata = div_result_i;
         end
         else begin
-            div_strat_o = div_strat_o;
-            div_reg_we = `WriteDisable;
+            div_strat_o   = div_strat_o;
+            div_reg_we    = `WriteDisable;
             div_reg_waddr =  `ZeroWord;
             div_reg_wdata = `ZeroWord;
         end
         if (div_busy_i) begin
             hold_flag_ex_o = 1;
-            div_jump_flag = `JumpDisable;
-            div_jump_addr = `ZeroWord;
+            div_jump_flag  = `JumpDisable;
+            div_jump_addr  = `ZeroWord;
             
         end
         else begin
             hold_flag_ex_o = 0;
-            div_jump_flag = div_jump_flag;
-            div_jump_addr = div_jump_addr;
+            div_jump_flag  = div_jump_flag;
+            div_jump_addr  = div_jump_addr;
         end
     end
 
@@ -185,19 +185,19 @@ module ex
     end
     always @(*)begin
         // to regs
-        reg_we = reg_we_i;
-        reg_waddr = reg_waddr_i;
-        reg_wdata = `ZeroWord;
+        reg_we      = reg_we_i;
+        reg_waddr   = reg_waddr_i;
+        reg_wdata   = `ZeroWord;
         // to pc_reg
-        jump_addr = `ZeroWord;
-        jump_flag = `JumpDisable;
+        jump_addr   = `ZeroWord;
+        jump_flag   = `JumpDisable;
         // to ram
-        mem_we_o = `WriteDisable;
+        mem_we_o    = `WriteDisable;
         mem_waddr_o = `ZeroWord;
         mem_wdata_o = `ZeroWord;
-        mem_req_o = `RIB_NREQ;
+        mem_req_o   = `RIB_NREQ;
         // to csr_reg
-        csr_we_o = csr_we_i;
+        csr_we_o    = csr_we_i;
         csr_waddr_o = csr_waddr_i;
         csr_wdata_o = `ZeroWord;
         case(opcode)

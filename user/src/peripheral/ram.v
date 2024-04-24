@@ -12,7 +12,7 @@ module ram
 );
     reg [31:0] _ram [0:255];
 
-    always @(posedge clk or negedge rst_n)
+    always @(posedge clk)// or negedge rst_n) // 不注销这里会报错 ambiguous clock in event control
         if(mem_we_i == `WriteEnable)
             _ram[mem_waddr_i[31:2]] <= mem_wdata_i;
     

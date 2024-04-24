@@ -17,7 +17,7 @@ module testbench;
     always #10 clk = ~clk;
 
     integer r;
-    wire [31:0] x3 = u_tinyriscv_soc_top.u_tiny_riscv.u_regs.regs[3];
+    wire [31:0] x3  = u_tinyriscv_soc_top.u_tiny_riscv.u_regs.regs[3] ;
     wire [31:0] x26 = u_tinyriscv_soc_top.u_tiny_riscv.u_regs.regs[26];
     wire [31:0] x27 = u_tinyriscv_soc_top.u_tiny_riscv.u_regs.regs[27];
 
